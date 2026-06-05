@@ -19,6 +19,12 @@ using namespace std;
     //  8ビット右にズラしてから0x0000FFとANDをとる
         int green = (color >> 8) & 0x0000FF;
 
+    //  16ビット右にズラしてから0x0000FFとANDをとる
+        int red = (color >> 16) & 0x0000FF;
+
+        cout << red << endl;
+        cout << green << endl;
+        cout << blue << endl;
 
         return 0;
     }
