@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
 
+struct Define
+{
+    static constexpr double TAX_RATE = 0.10;
+};
+
 int main() {
-    int price = 1500;            
-    double tax_rate = 0.10;      
+    int price = 1500;
     
     // 計算処理
-    int tax = price * tax_rate;  
+    int tax = price * Define::TAX_RATE;  
     int total = price + tax;    
 
     // 結果を出力
