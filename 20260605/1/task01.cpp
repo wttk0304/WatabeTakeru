@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
 
-    int main()
-    {
-        int array[10][10] = {
+int main() {
+    int array[10][10] = {
         {5, 364, 251, 751, 705, 847, 491, 121, 82, 938},
         {303, 265, 674, 868, 92, 194, 954, 244, 350, 980},
         {952, 153, 440, 475, 908, 652, 410, 719, 367, 761},
@@ -14,7 +13,7 @@ using namespace std;
         {792, 854, 524, 76, 197, 745, 533, 61, 869, 230},
         {440, 174, 672, 845, 795, 667, 886, 677, 782, 761},
         {838, 813, 898, 383, 651, 186, 393, 305, 731, 666}
-        };
+    };
 
         int min_val = 0;
         int max_val = 0;
@@ -22,15 +21,15 @@ using namespace std;
         int max_r = 0, max_c = 0;
 
         for (int r = 0; r < 10; r++) {
-        for (int c = 0; c < 10; c++) {
-            if (array[r][c] < min_val) {
-                min_val = array[r][c];
-                min_r = r; 
-                min_c = c;
-            }
-            if (array[r][c] > max_val) {
-                max_val = array[r][c];
-            }
+            for (int c = 0; c < 10; c++) {
+                if (array[r][c] < min_val) {
+                    min_val = array[r][c];
+                    min_r = r; 
+                    min_c = c;
+                }
+                if (array[r][c] > max_val) {
+                    max_val = array[r][c];
+                }
             }
         }
 
