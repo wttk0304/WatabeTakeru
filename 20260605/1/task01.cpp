@@ -33,6 +33,9 @@ using namespace std;
             }
             }
         }
+
+        cout << "最小値: " << min_val << " 座標: (" << min_r << ", " << min_c << ")" << endl;
+        cout << "最大値: " << max_val << " 座標: (" << max_r << ", " << max_c << ")" << endl;
         
         return 0;
     }
