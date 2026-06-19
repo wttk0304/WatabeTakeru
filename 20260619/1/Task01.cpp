@@ -2,11 +2,10 @@
 #include <random>
 #include "Define.cpp"
 
-std::random_device rd;
-
 int main() {
 
     int array[Define::SIZE];
+    std::random_device rd;
 
     return 0;
 }
