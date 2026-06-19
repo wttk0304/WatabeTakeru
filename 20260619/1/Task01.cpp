@@ -1,9 +1,12 @@
 #include <iostream>
 #include <random>
+#include "Define.cpp"
 
 std::random_device rd;
 
-const int SIZE = 100;
+int main() {
 
-int array[SIZE];
+    int array[Define::SIZE];
 
+    return 0;
+}
