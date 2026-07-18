@@ -1,8 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int array[10][10] = {
+    int main() {
+    
+        const int LINE = 10; 
+        const int ROW = 10; 
+
+        int array[LINE][ROW] = {
         {5, 364, 251, 751, 705, 847, 491, 121, 82, 938},
         {303, 265, 674, 868, 92, 194, 954, 244, 350, 980},
         {952, 153, 440, 475, 908, 652, 410, 719, 367, 761},
@@ -13,22 +17,18 @@ int main() {
         {792, 854, 524, 76, 197, 745, 533, 61, 869, 230},
         {440, 174, 672, 845, 795, 667, 886, 677, 782, 761},
         {838, 813, 898, 383, 651, 186, 393, 305, 731, 666}
-    };
+        };
 
-        int min_val = 999;
-        int max_val = -1;
+        int min_val = array[0][0];
+        int max_val = array[0][0];
+    
+        int min_r = 0, min_c = 0;
+        int max_r = 0, max_c = 0;
 
-        for (int r = 0; r < 10; r++) {
-            if (array[r][0] < min_val) {
-                min_val = array[r][0];
-            }
-            if (array[r][0] > max_val) {
-                max_val = array[r][0];
-            }
-        }
+        
 
         cout << "最小値: " << min_val << " 座標: (0, 0)" << endl;
         cout << "最大値: " << max_val << " 座標: (0, 0)" << endl;
 
-    return 0;
-}
+        return 0;
+    }
