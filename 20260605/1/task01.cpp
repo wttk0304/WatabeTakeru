@@ -19,8 +19,9 @@ using namespace std;
         {838, 813, 898, 383, 651, 186, 393, 305, 731, 666}
         };
 
-        int min_val = 0;
-        int max_val = 0;
+        int min_val = array[0][0];
+        int max_val = array[0][0];
+    
         int min_r = 0, min_c = 0;
         int max_r = 0, max_c = 0;
 
