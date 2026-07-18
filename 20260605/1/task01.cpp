@@ -34,6 +34,8 @@ using namespace std;
                 }
                 if (array[r][c] > max_val) {
                     max_val = array[r][c];
+                    max_r = r; 
+                    max_c = c;
                 }
             }
         }
