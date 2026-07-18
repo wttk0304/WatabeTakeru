@@ -1,37 +1,29 @@
 #include <iostream>
-#include <random>
-#include "Define.cpp"
+#include <cstdlib>
+using namespace std;
 
-int main() {
+    int main() {
+        
+        const int SIZE = 100;
+        int array[SIZE];
 
-    int array[Define::SIZE];
-    std::random_device rd;
-    std::uniform_int_distribution<int> distrib (Define::MIN, Define::MAX); //uniform...は最小と最大指定
+        for (int i = 0; i < SIZE; i++) {
+            array[i] = rand() % 100 + 1; 
+        }
 
-    for (int i = 0; i < Define::SIZE; ++i) {
-        array[i] = distrib(rd); // 
-    }
-
-    std::cout << "ソート前: ";
-    for (int i = 0; i < Define::SIZE; ++i) {
-        std::cout << array[i] << " ";
-    }
-    std::cout << std::endl;
-
-    for (int i = 0; i < Define::SIZE - 1; ++i) {
-        for (int j = 0; j < Define::SIZE - 1 - i; ++j) {
-            if (array[j] > array[j + 1]) {
-                std::swap(array[j], array[j + 1]); //swapとは
+        for (int i = 0; i < SIZE - 1; i++) {
+            for (int j = 0; j < SIZE - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
             }
         }
+
+        for (int i = 0; i < SIZE; i++) {
+            cout << array[i] << " "; cout << endl;
+        }
+
+        return 0;
     }
-
-    std::cout << "ソート後: " << std::endl;
-    for (int i = 0; i < Define::SIZE; ++i) {
-        std::cout << array[i] << " ";
-    }
-    std::cout << std::endl;
-
-
-    return 0;
-}
