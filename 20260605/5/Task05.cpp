@@ -20,18 +20,18 @@ using namespace std;
         };
 
         int TOTAL = LINE * ROW;
-        int ROW_all[ROW] = {0};
-
+        int LINE_all[LINE] = {0};
+    
         for (int i = 0; i < TOTAL; i++) {
             int r = i / ROW;
             int c = i % ROW;
 
-            ROW_all[c] += array[r][c];
+            LINE_all[r] += array[r][c];
         }
 
-        for (int c = 0; c < ROW; c++) {
-            int average = (int)ROW_all[c] / LINE;
-            cout << c << "列の平均: " << average << endl;
+        for (int r = 0; r < LINE; r++) {
+            int average = (int)LINE_all[r] / ROW;
+            cout << r << "行の平均: " << average << endl;
         }
 
         return 0;
