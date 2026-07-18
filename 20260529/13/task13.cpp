@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-    int main() 
-    {
+    int main() {
     //    緑：8つズラす >> 8bit
     //    赤：16づズラす >>  16bit
 
