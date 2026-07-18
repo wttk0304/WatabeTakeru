@@ -10,4 +10,7 @@ int main() {
     int normal_tax = NORMAL_PRICE * TAX_RATE;
     int normal_total = NORMAL_PRICE + normal_tax;
 
+    int member_tax = MEMBER_PRICE * TAX_RATE;
+    int member_total = MEMBER_PRICE + member_tax;
+
 }
