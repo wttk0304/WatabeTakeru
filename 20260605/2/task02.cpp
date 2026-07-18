@@ -25,10 +25,26 @@ using namespace std;
         int min_r = 0, min_c = 0;
         int max_r = 0, max_c = 0;
 
+        int TOTAL = LINE * ROW;
         
+        for (int i = 0; i < TOTAL; i++) {
+            int r = i / ROW;
+            int c = i % ROW;
 
-        cout << "最小値: " << min_val << " 座標: (0, 0)" << endl;
-        cout << "最大値: " << max_val << " 座標: (0, 0)" << endl;
+            if (array[r][c] < min_val) {
+                min_val = array[r][c];
+                min_r = r; 
+                min_c = c;
+            }
+            if (array[r][c] > max_val) {
+            max_val = array[r][c];
+            max_r = r; 
+            max_c = c;
+            }
+        }
+
+        cout << "最小値: " << min_val << " 座標: (" << min_r << ", " << min_c << ")" << endl;
+        cout << "最大値: " << max_val << " 座標: (" << max_r << ", " << max_c << ")" << endl;
 
         return 0;
     }
