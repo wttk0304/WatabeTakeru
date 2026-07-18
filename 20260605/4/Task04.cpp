@@ -19,6 +19,20 @@ using namespace std;
         {838, 813, 898, 383, 651, 186, 393, 305, 731, 666}
         };
 
+        int TOTAL = LINE * ROW;
+        int ROW_alls[ROW] = {0};
+
+        for (int i = 0; i < TOTAL; i++) {
+            int r = i / ROW;
+            int c = i % ROW;
+
+            ROW_alls[c] += array[r][c];
+        }
+
+        for (int c = 0; c < ROW; c++) {
+            int average = (int)ROW_alls[c] / LINE;
+            cout << c << "列の平均: " << average << endl;
+        }
 
         return 0;
     }
