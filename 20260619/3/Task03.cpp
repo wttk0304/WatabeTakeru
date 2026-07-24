@@ -13,19 +13,18 @@ int main()
         array[i] = rand() % 9000 + 1000;
     }
 
-    for (int i = 0; i < SIZE - 1; i++)
+    // 挿入ソート処理（…どこかがちょっと違う！）
+    for (int i = 1; i < SIZE; i++)
     {
-        int min_index = i;
-        for (int j = i + 1; j < SIZE; j++)
-        {
-            if (array[j] < array[min_index])
-            {
-                min_index = j;
-            }
-        }
         int temp = array[i];
-        array[i] = array[min_index];
-        array[min_index] = temp;
+        int j = i - 1;
+
+        while (j >= 0 && array[j] < temp)
+        { // ← ここ！
+            array[j + 1] = array[j];
+            j--;
+        }
+        array[j + 1] = temp;
     }
 
     for (int i = 0; i < SIZE; i++)
