@@ -8,7 +8,7 @@ using namespace std;
         int array[SIZE];
 
         for (int i = 0; i < SIZE; i++) {
-            array[i] = rand() % 100 + 1; 
+            array[i] = rand() % 9000 + 1000; 
         }
 
         for (int i = 0; i < SIZE - 1; i++) {
