@@ -13,14 +13,13 @@ int main()
         array[i] = rand() % 9000 + 1000;
     }
 
-    // 挿入ソート処理（…どこかがちょっと違う！）
     for (int i = 1; i < SIZE; i++)
     {
         int temp = array[i];
         int j = i - 1;
 
         while (j >= 0 && array[j] < temp)
-        { // ← ここ！
+        { 
             array[j + 1] = array[j];
             j--;
         }
