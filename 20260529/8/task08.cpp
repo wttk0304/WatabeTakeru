@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
 
-    int main() {
-        for (int i = 1; i <= 100; ++i) {
-            if (i % 3 == 0 && i % 5 == 0) {
+int main()
+{
+    for (int i = 1; i <= 100; ++i)
+    {
+        if (i % 3 == 0 && i % 5 == 0)
+        {
             std::cout << i << std::endl;
-            }
         }
-    
-        return 0;
     }
+
+    return 0;
+}
